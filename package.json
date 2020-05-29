@@ -1,0 +1,26 @@
+{
+  "name": "svelte-device-detector",
+  "version": "0.1.0",
+  "license": "MIT",
+  "svelte": "src/lib/DeviceDetector.svelte",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public"
+  },
+  "devDependencies": {
+    "rollup": "^2.11.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-livereload": "^1.3.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "^5.2.2",
+    "rollup-plugin-terser": "^6.1.0",
+    "sirv-cli": "^0.4.6",
+    "svelte": "^3.23.0"
+  },
+  "dependencies": {
+    "ua-parser-js": "^0.7.21"
+  }
+}
