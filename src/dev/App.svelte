@@ -8,5 +8,7 @@
 
 <main>
   <h1>Svelte Device Detector</h1>
-  <DeviceDetector />
+  <DeviceDetector device="browser">
+    <h1>teste</h1>
+  </DeviceDetector>
 </main>
