@@ -1,15 +1,32 @@
 {
   "name": "svelte-device-detector",
   "version": "0.1.0",
+  "description": "Render views on different device types",
+  "repository": "https://github.com/andrelmlins/svelte-device-detector",
+  "author": "André Lins <andrelucas01@hotmail.com> (https://andrelmlins.github.io/)",
   "license": "MIT",
   "svelte": "src/lib/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
+  "files": [
+    "src/lib",
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public"
   },
+  "bugs": {
+    "url": "https://github.com/andrelmlins/svelte-device-detector/issues"
+  },
+  "keywords": [
+    "svelte",
+    "device",
+    "detector",
+    "user-agent"
+  ],
   "devDependencies": {
     "rollup": "^2.11.2",
     "rollup-plugin-commonjs": "^10.1.0",
