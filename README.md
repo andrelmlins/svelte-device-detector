@@ -4,9 +4,6 @@
 
 Render views on different device types.
 
-- Ignores sensitive case
-- Skips space
-
 ## Installation
 
 ```
@@ -17,7 +14,7 @@ yarn add svelte-device-detector
 
 <em>Note: to use this library in sapper, install as devDependency. See the [link](https://github.com/sveltejs/sapper-template#using-external-components).</em>
 
-## Demo [Link](https://svelte-device-detector.netlify.com/)
+## Demo
 
 Local demo:
 
@@ -33,31 +30,35 @@ An example of how to use the library:
 
 ```js
 <script>
-  import DeviceDetector, { DEVICE_TYPES, BROWSER_TYPES } from "svelte-device-detector";
+  import DeviceDetector from "svelte-device-detector";
 </script>
 
-<DeviceDetector device={DEVICE_TYPES.DESKTOP}>
+<DeviceDetector showInDevice="desktop">
   <p>Desktop</p>
 </DeviceDetector>
 
-<DeviceDetector browser={BROWSER_TYPES.CHROME} device={DEVICE_TYPES.MOBILE}>
-  <p>Mobile</p>
+<DeviceDetector showInBrowser="chrome" showInDevice="mobile">
+  <p>Mobile and Chrome</p>
 </DeviceDetector>
 
-<DeviceDetector browser="tablet">
-  <p>Tablet</p>
+<DeviceDetector showInBrowser={["safari", "firefox"]}>
+  <p>Safari or Firefox</p>
 </DeviceDetector>
 ```
 
 ## Properties
 
-Component props:
+For best results the values have these characteristics:
 
-| Prop    | Default | Type   | Description                             |
-| ------- | ------- | ------ | --------------------------------------- |
-| device  | -       | string | Render view on device types             |
-| browser | -       | string | Render view on browser types            |
-| os      | -       | string | Render view on operational system types |
+- Ignores sensitive case
+- Ignore special character
+- Skips space
+
+| Prop          | Default | Type           | Description                             |
+| ------------- | ------- | -------------- | --------------------------------------- |
+| showInDevice  | -       | `string|array` | Render view on device types             |
+| showInBrowser | -       | `string|array` | Render view on browser types            |
+| showInOs      | -       | `string|array` | Render view on operational system types |
 
 ## NPM Statistics
 

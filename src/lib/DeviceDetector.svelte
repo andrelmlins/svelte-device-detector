@@ -2,9 +2,9 @@
   import UAParser from "ua-parser-js";
   import { onMount } from "svelte";
 
-  export let device = undefined;
-  export let browser = undefined;
-  export let os = undefined;
+  export let showInDevice = undefined;
+  export let showInBrowser = undefined;
+  export let showInOs = undefined;
 
   let showSlot = false;
 
@@ -15,15 +15,18 @@
     let detectedOs = uaParser.getOS();
     let show = true;
 
-    if (device && formatter(device) !== getDevice(device)) {
+    if (showInDevice && !equals(getDevice(detectedDevice), showInDevice)) {
       show = false;
     }
 
-    if (browser && formatter(browser) !== formatter(detectedBrowser.name)) {
+    if (
+      showInBrowser &&
+      !equals(formatter(detectedBrowser.name), showInBrowser)
+    ) {
       show = false;
     }
 
-    if (os && formatter(os) !== formatter(detectedOs.name)) {
+    if (showInOs && !equals(formatter(detectedOs.name), showInOs)) {
       show = false;
     }
 
@@ -39,6 +42,14 @@
   };
 
   const formatter = string => string.toLowerCase().replace(/ /g, "");
+
+  const equals = (value, option) => {
+    if (Array.isArray(option)) {
+      return option.some(item => value === formatter(item));
+    }
+
+    return value === formatter(item);
+  };
 </script>
 
 {#if showSlot}
