@@ -1,6 +1,6 @@
 {
   "name": "svelte-device-detector",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Render views on different device types",
   "repository": "https://github.com/andrelmlins/svelte-device-detector",
   "author": "André Lins <andrelucas01@hotmail.com> (https://andrelmlins.github.io/)",
