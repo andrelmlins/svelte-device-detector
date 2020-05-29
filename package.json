@@ -2,7 +2,7 @@
   "name": "svelte-device-detector",
   "version": "0.1.0",
   "license": "MIT",
-  "svelte": "src/lib/DeviceDetector.svelte",
+  "svelte": "src/lib/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "scripts": {

@@ -38,12 +38,12 @@ export default [
     }
   },
   {
-    input: "src/lib/DeviceDetector.svelte",
+    input: "src/lib/index.js",
     output: { file: pkg.main, format: "umd", name: "DeviceDetector" },
     plugins: [svelte(), resolve(), commonjs()]
   },
   {
-    input: "src/lib/DeviceDetector.svelte",
+    input: "src/lib/index.js",
     output: { file: pkg.module, format: "es" },
     external: ["svelte/internal"],
     plugins: [svelte(), commonjs()]

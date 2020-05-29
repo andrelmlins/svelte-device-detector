@@ -32,7 +32,7 @@
 
   const getDevice = device => {
     if (!device.type) {
-      return "browser";
+      return "desktop";
     }
 
     return formatter(device.type);
