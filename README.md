@@ -55,11 +55,11 @@ For best results the values have these characteristics:
 - Removing accents
 - Skips space
 
-| Prop          | Default | Type           | Description                             |
-| ------------- | ------- | -------------- | --------------------------------------- |
-| showInDevice  | -       | `string|array` | Render view on device types             |
-| showInBrowser | -       | `string|array` | Render view on browser types            |
-| showInOs      | -       | `string|array` | Render view on operational system types |
+| Prop          | Default | Type              | Description                             |
+| ------------- | ------- | ----------------- | --------------------------------------- |
+| showInDevice  | -       | `string`, `array` | Render view on device types             |
+| showInBrowser | -       | `string`, `array` | Render view on browser types            |
+| showInOs      | -       | `string`, `array` | Render view on operational system types |
 
 ## NPM Statistics
 
