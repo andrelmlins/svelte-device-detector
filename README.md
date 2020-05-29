@@ -4,6 +4,9 @@
 
 Render views on different device types.
 
+- Ignores sensitive case
+- Skips space
+
 ## Installation
 
 ```
@@ -39,6 +42,10 @@ An example of how to use the library:
 
 <DeviceDetector browser={BROWSER_TYPES.CHROME} device={DEVICE_TYPES.MOBILE}>
   <p>Mobile</p>
+</DeviceDetector>
+
+<DeviceDetector browser="tablet">
+  <p>Tablet</p>
 </DeviceDetector>
 ```
 
