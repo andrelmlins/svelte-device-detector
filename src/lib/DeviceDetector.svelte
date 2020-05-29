@@ -41,7 +41,13 @@
     return formatter(device.type);
   };
 
-  const formatter = string => string.toLowerCase().replace(/ /g, "");
+  const formatter = string =>
+    string
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/ /g, "")
+      .replace(/[^\w\s]/gi, "")
+      .replace(/[\u0300-\u036f]/g, "");
 
   const equals = (value, option) => {
     if (Array.isArray(option)) {

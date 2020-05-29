@@ -52,6 +52,7 @@ For best results the values have these characteristics:
 
 - Ignores sensitive case
 - Ignore special character
+- Removing accents
 - Skips space
 
 | Prop          | Default | Type           | Description                             |
