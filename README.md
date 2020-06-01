@@ -21,7 +21,7 @@ Local demo:
 ```
 git clone https://github.com/andrelmlins/svelte-device-detector.git
 cd svelte-device-detector
-yarn && yarn start
+npm && npm run dev
 ```
 
 ## Examples
