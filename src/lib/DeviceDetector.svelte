@@ -54,7 +54,7 @@
       return option.some(item => value === formatter(item));
     }
 
-    return value === formatter(item);
+    return value === formatter(option);
   };
 </script>
 
